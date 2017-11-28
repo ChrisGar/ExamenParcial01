@@ -1,3 +1,8 @@
+package examenparcial01.modelo;
+
+
+import examenparcial01.modelo.Boleto;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,7 +17,8 @@ public class Asistente extends Persona{
     
     private Boleto boleto;
 
-    public Asistente(Boleto boleto) {
+    public Asistente(Boleto boleto, int codigo, String nombre, String fechaNacimiento) {
+        super(codigo, nombre, fechaNacimiento);
         this.boleto = boleto;
     }
 
@@ -23,6 +29,5 @@ public class Asistente extends Persona{
     public void setBoleto(Boleto boleto) {
         this.boleto = boleto;
     }
-    
-    
+
 }
