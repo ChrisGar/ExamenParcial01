@@ -39,7 +39,7 @@ public class EventoVentanaFestival implements ActionListener {
 
             this.vFestival.getgD().addFestival(fe);
 
-            Object[][] datoFestival = this.vFestival.cargaDatosTabla(this.vFestival.getgD().getFestivalList().size(), 4);
+            Object[][] datoFestival = this.vFestival.cargaDatosTabla(this.vFestival.getgD().getFestivalList().size(), 5);
             this.vFestival.setDatos(datoFestival);
             this.vFestival.getModeloTabla().setDataVector(this.vFestival.getDatos(), this.vFestival.getEncabezado());
 
