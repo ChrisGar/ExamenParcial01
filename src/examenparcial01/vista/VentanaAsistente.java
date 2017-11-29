@@ -36,9 +36,9 @@ public class VentanaAsistente extends JInternalFrame{
     private JScrollPane scroll;
     
     
-    public VentanaAsistente(String t, GestionDato gD)
+    public VentanaAsistente( GestionDato gD)
     {
-        super(t);
+        super("Datos del Asistente",true,true,true,true);
         this.gestionDato=gD;
         this.setSize(800, 600);
         this.iniciaComponentes();
