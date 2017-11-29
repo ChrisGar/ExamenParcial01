@@ -96,7 +96,36 @@ public class GestionDato {
         return this.PresentacionFestivalList.add(p);
         
     }
-     
+     public Festival buscarFestival(String txt) {
+
+        Festival retorno = null;
+        int i = 0;
+        for (Festival r : this.FestivalList) {
+            if (r.getNombre().equals(txt)) {
+                i++;
+                return r;
+
+            }
+
+        }
+
+        return retorno;
+    }
+     public Artista buscarArtista(String txt) {
+
+        Artista retorno = null;
+        int i = 0;
+        for (Artista a : this.ArtistaList) {
+            if (a.getNombre().equals(txt)) {
+                i++;
+                return a;
+
+            }
+
+        }
+
+        return retorno;
+    }
     
     
     

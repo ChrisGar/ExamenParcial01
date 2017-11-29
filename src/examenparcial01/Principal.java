@@ -33,7 +33,7 @@ public class Principal {
         List<Festival> fe=new ArrayList<Festival>();
         List<PresentacionFestival> pe=new ArrayList<PresentacionFestival>();
         
-        GestionDato gD = new GestionDato();
+        GestionDato gD = new GestionDato(as,la,bo,fe,pe);
         
         Ventana v = new Ventana("Examen Parcial 01", gD);
     }

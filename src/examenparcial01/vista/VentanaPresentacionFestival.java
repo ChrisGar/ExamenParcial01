@@ -9,6 +9,7 @@ import examenparcial01.controlador.EventoVentanaPresentacion;
 import examenparcial01.controlador.GestionDato;
 import examenparcial01.modelo.Artista;
 import examenparcial01.modelo.Festival;
+import examenparcial01.modelo.PresentacionFestival;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
@@ -84,6 +85,17 @@ public class VentanaPresentacionFestival extends JInternalFrame {
         panel.add(this.scroll);
         this.add(panel);
     }
+    public Object[][] cargarDatos(int f, int c) {
+        Object[][] retorno = new Object[f][c];
+        int i = 0;
+        for (PresentacionFestival c1 : this.gD.getPresentacionFestivalList()) {
+            retorno[i][0] = c1.getFestival().getNombre();
+            retorno[i][1] = c1.getArtista().getNombre();
+            retorno[i][2] = c1.getOrden();
+            i++;
+        }
+        return retorno;
+    }
         public Object[] CargaCombo() {
         String[] retorno = new String[this.gD.getFestivalList().size()];
         int i = 0;
@@ -103,5 +115,93 @@ public class VentanaPresentacionFestival extends JInternalFrame {
         return retorno;
     }
 
+    public List<JLabel> getEtiquetaList() {
+        return etiquetaList;
+    }
 
+    public void setEtiquetaList(List<JLabel> etiquetaList) {
+        this.etiquetaList = etiquetaList;
+    }
+
+    public List<JButton> getBotonList() {
+        return botonList;
+    }
+
+    public void setBotonList(List<JButton> botonList) {
+        this.botonList = botonList;
+    }
+
+    public List<JTextField> getTxtList() {
+        return txtList;
+    }
+
+    public void setTxtList(List<JTextField> txtList) {
+        this.txtList = txtList;
+    }
+
+    public Object[][] getDatos() {
+        return datos;
+    }
+
+    public void setDatos(Object[][] datos) {
+        this.datos = datos;
+    }
+
+    public Object[] getEncabezado() {
+        return encabezado;
+    }
+
+    public void setEncabezado(Object[] encabezado) {
+        this.encabezado = encabezado;
+    }
+
+    public DefaultTableModel getModeloTabla() {
+        return modeloTabla;
+    }
+
+    public void setModeloTabla(DefaultTableModel modeloTabla) {
+        this.modeloTabla = modeloTabla;
+    }
+
+    public JTable getTabla() {
+        return tabla;
+    }
+
+    public void setTabla(JTable tabla) {
+        this.tabla = tabla;
+    }
+
+    public JScrollPane getScroll() {
+        return scroll;
+    }
+
+    public void setScroll(JScrollPane scroll) {
+        this.scroll = scroll;
+    }
+
+    public GestionDato getgD() {
+        return gD;
+    }
+
+    public void setgD(GestionDato gD) {
+        this.gD = gD;
+    }
+
+    public JComboBox getCombobox() {
+        return combobox;
+    }
+
+    public void setCombobox(JComboBox combobox) {
+        this.combobox = combobox;
+    }
+
+    public JComboBox getCombobox1() {
+        return combobox1;
+    }
+
+    public void setCombobox1(JComboBox combobox1) {
+        this.combobox1 = combobox1;
+    }
+
+    
 }
