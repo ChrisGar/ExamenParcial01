@@ -72,6 +72,10 @@ public class Ventana extends JFrame
         this.listMenu.get(4).add(this.listMenuItem.get(4));
         
         this.listMenuItem.get(0).addActionListener(new EventoVentanaPrincipal(this));
+        this.listMenuItem.get(1).addActionListener(new EventoVentanaPrincipal(this));
+        this.listMenuItem.get(2).addActionListener(new EventoVentanaPrincipal(this));
+        this.listMenuItem.get(3).addActionListener(new EventoVentanaPrincipal(this));
+        
 
     }
 
