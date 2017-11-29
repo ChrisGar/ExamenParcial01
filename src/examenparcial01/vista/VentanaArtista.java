@@ -62,7 +62,7 @@ public class VentanaArtista extends JInternalFrame {
         this.botonList.add(new JButton("Guardar"));
         this.botonList.get(0).addActionListener(new EventoVentanaArtista(this));
         this.botonList.add(new JButton("Borrar"));
-        
+        this.botonList.get(1).addActionListener(new EventoVentanaArtista(this));
         this.encabezado=new Object[4];
         this.encabezado[0]="Cedula";
         this.encabezado[1]="Nombre Y Apellido";
@@ -89,15 +89,13 @@ public class VentanaArtista extends JInternalFrame {
     }
     
     public Object[][] cargardatos(int x,int y){
-
         Object[][] retorno=new Object[x][y];
         int i=0;
         for (Artista a: this.gd.getArtistaList()){
             retorno[i][0]=a.getCodigo();
-            retorno[i][1]=a.getNombreYApellido();
+            retorno[i][1]=a.getNombre();
             retorno[i][2]=a.getFechaNacimiento();
-            retorno[i][3]=a.getFechaNacimiento();
-            retorno[i][4]=a.getMusicagenero();
+            retorno[i][3]=a.getMusicagenero();
             i++;
         }
     return retorno;
