@@ -5,6 +5,7 @@
  */
 package examenparcial01.vista;
 
+import examenparcial01.controlador.EventoVentanaPrincipal;
 import examenparcial01.controlador.GestionDato;
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +70,49 @@ public class Ventana extends JFrame
         this.listMenu.get(2).add(this.listMenuItem.get(2));
         this.listMenu.get(3).add(this.listMenuItem.get(3));
         this.listMenu.get(4).add(this.listMenuItem.get(4));
+        
+        this.listMenuItem.get(0).addActionListener(new EventoVentanaPrincipal(this));
 
     }
+
+    public JMenuBar getMenu() {
+        return menu;
+    }
+
+    public void setMenu(JMenuBar menu) {
+        this.menu = menu;
+    }
+
+    public JDesktopPane getEscritorio() {
+        return escritorio;
+    }
+
+    public void setEscritorio(JDesktopPane escritorio) {
+        this.escritorio = escritorio;
+    }
+
+    public List<JMenu> getListMenu() {
+        return listMenu;
+    }
+
+    public void setListMenu(List<JMenu> listMenu) {
+        this.listMenu = listMenu;
+    }
+
+    public List<JMenuItem> getListMenuItem() {
+        return listMenuItem;
+    }
+
+    public void setListMenuItem(List<JMenuItem> listMenuItem) {
+        this.listMenuItem = listMenuItem;
+    }
+
+    public GestionDato getGestionDato() {
+        return gestionDato;
+    }
+
+    public void setGestionDato(GestionDato gestionDato) {
+        this.gestionDato = gestionDato;
+    }
+    
 }
