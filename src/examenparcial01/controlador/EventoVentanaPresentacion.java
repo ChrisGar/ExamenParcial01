@@ -11,6 +11,7 @@ import examenparcial01.modelo.PresentacionFestival;
 import examenparcial01.vista.VentanaPresentacionFestival;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -29,7 +30,7 @@ public class EventoVentanaPresentacion implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-    
+        try{
         if (e.getSource().equals(this.vPresentacion.getBotonList().get(0))) {
                 String nP = this.vPresentacion.getCombobox().getSelectedItem().toString();
                 Festival f = this.vPresentacion.getgD().buscarFestival(nP);
@@ -45,6 +46,9 @@ public class EventoVentanaPresentacion implements ActionListener{
             }if (e.getSource().equals(this.vPresentacion.getBotonList().get(1))) {
                 this.vPresentacion.getTxtList().get(0).setText("");
             }
+            }catch (NumberFormatException numb) {
+             JOptionPane.showMessageDialog(vPresentacion, "Orden es un numero entero");
+        }
     
     }
     
